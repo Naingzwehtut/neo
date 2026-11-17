@@ -1683,9 +1683,9 @@
     },
     "/examples/grid/cellEditing/index.html": {
         "title": "Grid CellEditing — Web Worker Data Grid Demo | Neo.mjs",
-        "description": "Typed cell editors. Edit text, a stepped number, date or country; compare the protected GitHub ID and switch selection modes.",
+        "description": "An order sheet with typed editors, a refused quantity and a calculated line total. Double-click or press Enter to edit, Tab to move on. A quantity over 50...",
         "schemaType": "WebPage",
-        "lastmod": "2026-11-09"
+        "lastmod": "2026-11-17"
     },
     "/examples/grid/container/index.html": {
         "title": "GridContainer — Web Worker Data Grid Demo | Neo.mjs",
@@ -1733,7 +1733,7 @@
         "title": "TreeGrid - Big Data — Web Worker Data Grid Demo | Neo.mjs",
         "description": "An organization of 20,000 people and units as a tree grid, up to 100,000 rows, 200 columns and 20 levels. Open a squad to its people, give kudos from a...",
         "schemaType": "WebPage",
-        "lastmod": "2026-09-13"
+        "lastmod": "2026-11-17"
     },
     "/examples/grid/valueBanding/index.html": {
         "title": "Grid Value Banding — Web Worker Data Grid Demo | Neo.mjs",
