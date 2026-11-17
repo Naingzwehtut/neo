@@ -95,7 +95,7 @@ test.describe('Portal examples family navigation', () => {
             'State & Data', 'Workers & Platform', 'Apps'
         ]);
         expect(view.getTabButtons().map(button => button.route)).toEqual(publishedRoutes);
-        expect(view.getCatalogStore().getCount()).toBe(78);
+        expect(view.getCatalogStore().getCount()).toBe(79);
         expect(view.getCard(0).store.getCount()).toBe(28);
         expect(view.getCard(0).store.items.map(record => record.id)).toEqual(featuredExampleIds);
         expect(ids('/examples/grid')).toEqual(coveredGridTableIds);
@@ -281,7 +281,7 @@ test.describe('Portal examples family navigation', () => {
         expect(ids('/examples/platform')).toEqual(['offscreen-canvas', 'shared-offscreen-canvas']);
         expect(ids('/examples/charts')).toEqual(['offscreen-canvas']);
         expect(view.getCatalogStore().items.filter(record => record.id === 'dialog-drag-drop')).toHaveLength(1);
-        expect(view.getCatalogStore().getCount()).toBe(78)
+        expect(view.getCatalogStore().getCount()).toBe(79)
     });
 
     for (const mode of ['dist_prod', 'dist_esm', 'dist_dev', 'devmode']) {
@@ -344,7 +344,7 @@ const catalog            = JSON.parse(fs.readFileSync(path.join(dataRoot, 'examp
       ],
       newExampleIds = [
           'grid-animated-row-sorting', 'grid-cell-editing', 'grid-container', 'grid-content-sized-rows',
-          'grid-covid', 'grid-header-groups', 'grid-locked-columns', 'grid-nested-record-fields',
+          'grid-covid', 'grid-export', 'grid-header-groups', 'grid-locked-columns', 'grid-nested-record-fields',
           'grid-tree', 'grid-value-banding', 'json-grid-container', 'table-cell-editing',
           'table-container', 'table-covid', 'table-nested-record-fields', 'table-store', 'table-performance'
       ],
@@ -433,12 +433,12 @@ test.describe('Portal examples canonical catalog', () => {
         })
     }
 
-    test('loads 78 logical examples with unique stable string identities', () => {
+    test('loads 79 logical examples with unique stable string identities', () => {
         const {store} = createList(),
               ids     = [];
 
-        expect(catalog).toHaveLength(78);
-        expect(store.getCount()).toBe(78);
+        expect(catalog).toHaveLength(79);
+        expect(store.getCount()).toBe(79);
 
         store.forEach(record => {
             expect(typeof record.id, record.name).toBe('string');
@@ -446,7 +446,7 @@ test.describe('Portal examples canonical catalog', () => {
             ids.push(record.id)
         });
 
-        expect(new Set(ids).size).toBe(78);
+        expect(new Set(ids).size).toBe(79);
         expect(list.catalogMode).toBe('dist_prod')
     });
 
@@ -550,7 +550,7 @@ test.describe('Portal examples canonical catalog', () => {
         expect(() => check([{...example, lookFor: ''}])).toThrow()
     });
 
-    test('the catalog holds the 21 Grid and Table identities and the overview shows the covered ones', () => {
+    test('the catalog holds the 22 Grid and Table identities and the overview shows the covered ones', () => {
         const view         = createView(),
               catalogStore = view.getCatalogStore(),
               store        = view.getCard(1).store,
@@ -566,7 +566,7 @@ test.describe('Portal examples canonical catalog', () => {
         });
 
         expect(ids).toEqual(coveredGridTableIds);
-        expect(counts).toEqual({Grid: 14, Table: 7});
+        expect(counts).toEqual({Grid: 15, Table: 7});
         expect(store.items.map(record => record.id)).toEqual(coveredGridTableIds);
         expect(store.getSource()).toBe(catalogStore)
     });

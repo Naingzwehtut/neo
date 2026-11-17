@@ -640,6 +640,23 @@
         "scope": "Loads statistics from an external API; availability and data freshness depend on that service."
     },
     {
+        "id": "grid-export",
+        "image": "devmode/grid-export-14.jpg",
+        "name": "Grid CSV Export",
+        "sourceUrl": "examples/grid/export",
+        "urls": {
+            "devmode": "examples/grid/export/index.html",
+            "dist_dev": "dist/development/examples/grid/export/index.html",
+            "dist_esm": "dist/esm/examples/grid/export/index.html",
+            "dist_prod": "dist/production/examples/grid/export/index.html"
+        },
+        "hiddenIn": [],
+        "family": "grid-table",
+        "component": "Grid",
+        "feature": "CSV export of the filtered and sorted rows with toCsv() and exportCsv()",
+        "lookFor": "Filter and sort 300 invoices, show the CSV beside the grid, switch to semicolons, then download it."
+    },
+    {
         "id": "grid-header-groups",
         "image": "devmode/grid-header-groups-14.jpg",
         "name": "Grouped Grid Headers",
